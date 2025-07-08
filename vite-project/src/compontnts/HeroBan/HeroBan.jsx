@@ -12,7 +12,7 @@ function HeroBan() {
                         <div className="hero-content">
                           <h6>STYLE MADE FOR YOU</h6>
                           <h1>FRESH STYLES TO ELEVATE<br/>YOUR EVERYDAY LOOK</h1>
-                          <Link to="/Shop" className="btn hero_btn">Shop Now <i className="fa fa-bag-shopping"></i></Link>
+                          <Link to="/Shop" className="hero_btn">Shop Now <i className="fa fa-bag-shopping"></i></Link>
                         </div>
                       </div>
                      

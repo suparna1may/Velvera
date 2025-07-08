@@ -18,7 +18,7 @@ function Header() {
         <div className="col-12">
           <h6>
             Enjoy FREE standard delivery on orders over $100.
-            <a href="shop"> <i className="fa fa-bag-shopping"></i> SHOP NOW</a>
+            <Link to="/Shop"> <i className="fa fa-bag-shopping"></i> SHOP NOW</Link>
 
           </h6>
 
@@ -52,15 +52,16 @@ function Header() {
                 <a className="nav-link dropdown-toggle" href="#"  role="button">
                   Categories
                 </a>
+                
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Men’s Collection</a></li>
-                  <li><a className="dropdown-item" href="#">Women’s Collection</a></li>
-                  <li><a className="dropdown-item" href="#">Accessories Collection</a></li>
+                  <li><Link className="dropdown-item" to="/Shop/cat-men">Men’s Collection</Link></li>
+                  <li><Link className="dropdown-item" to="/Shop/cat-women">Women’s Collection</Link></li>
+                  <li><Link className="dropdown-item" to="/Shop/accessory">Accessories Collection</Link></li>
                 </ul>
               </li>
 
               <li className="nav-item menu-item">
-              <Link to="/" className="nav-link active">Contact</Link>
+              <Link to="/Contact" className="nav-link active">Contact</Link>
               </li>    
             </ul>
      

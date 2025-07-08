@@ -7,7 +7,8 @@ const products = [
       name: 'Mens Formal Shirt' ,
       price: '159.00' ,
       quantity: 1,
-      category: 'clothing',
+      category: 'cat-men',
+      subcategory: 'shirt',
      },
 
      { id: 2, 
@@ -18,7 +19,8 @@ const products = [
         name: 'Womens Dress' ,
         price: '169.00' ,
         quantity: 1,
-        category: 'clothing',
+        category: 'cat-women',
+        subcategory: 'dress',
        },
 
        { id: 3, 
@@ -29,7 +31,8 @@ const products = [
         name: 'Mens T-Shirt' ,
         price: '120.00' ,
         quantity: 1,
-        category: 'clothing',
+        category: 'cat-men',
+        subcategory: 'tshirt',
        },
         
        { id: 4, 
@@ -41,6 +44,7 @@ const products = [
         price: '132.00' ,
         quantity: 1,
         category: 'accessory',
+        subcategory: 'bag',
        },
 
        { id: 5, 
@@ -51,7 +55,8 @@ const products = [
         name: 'Slim Fit Mens Jeans' ,
         price: '225.00' ,
         quantity: 1,
-        category: 'clothing',
+        category: 'cat-men',
+        subcategory: 'jeans',
        },
 
        { id: 6, 
@@ -63,6 +68,7 @@ const products = [
         price: '69.00' ,
         quantity: 1,
         category: 'accessory',
+        subcategory: 'belt',
        },
 
        { id: 7, 
@@ -73,7 +79,8 @@ const products = [
         name: 'Mens Casual Shirt' ,
         price: '120.00' ,
         quantity: 1,
-        category: 'clothing',
+        category: 'cat-men',
+        subcategory: 'shirt',
        },
 
        { id: 8, 
@@ -84,7 +91,8 @@ const products = [
         name: 'Womens Sweatshirt' ,
         price: '102.00' ,
         quantity: 1,
-        category: 'clothing',
+        category: 'cat-women',
+        subcategory: 'tshirt',
        },
   ];
   

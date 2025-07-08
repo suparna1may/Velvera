@@ -10,6 +10,7 @@ function Category() {
 
   const categories = [
     {
+      id: 'cat-men',
       img: CategoryImg1,
       title: "Men’s Collection",
       icon: "fas fa-user-tie",
@@ -18,6 +19,8 @@ function Category() {
         "Modern classics and everyday essentials designed for comfort, confidence, and style.",
     },
     {
+      id: 'cat-women',
+      category: 'cat-women',
       img: CategoryImg2,
       title: "Women’s Collection",
       icon: "fas fa-user-alt",
@@ -26,6 +29,7 @@ function Category() {
         "Effortless fashion that blends elegance, versatility, and comfort—made to move with you.",
     },
     {
+      id: 'accessory',
       img: CategoryImg3,
       title: "Accessories Collection",
       icon: "fas fa-shopping-bag",
@@ -67,7 +71,7 @@ function Category() {
                     <span><i className={cat.icon}></i></span>
                     <h3>{cat.headline}</h3>
                     <p>{cat.description}</p>
-                    <Link to="/Shop" className="shop_btn">
+                    <Link to={`/Shop/${cat.id}`} className="shop_btn">
                       Shop Now <i className="fa fa-bag-shopping"></i>
                     </Link>
                   </div>
