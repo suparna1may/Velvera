@@ -8,6 +8,7 @@ const initialState = {
     totalQuantity: 0,
     totalPrice: 0,
     wishlist: JSON.parse(localStorage.getItem('wishlist')) || [],
+    
   };
 
 
@@ -16,6 +17,7 @@ export const cartSlice = createSlice({
     name: "cart",
     initialState,
     reducers: {
+     
 
       //wishlist page
 

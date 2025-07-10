@@ -1481,3 +1481,35 @@ color: #C7C7C7;
 }
 
 /* CONTACT PAGE END */
+
+.search-box .cursor-pointer {
+  cursor: pointer;
+}
+
+.search-results {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 44px;
+}
+
+.search-results > div{
+  width: 300px;
+}
+
+.search-box .form-control{
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.search-results h4{
+  color: #1c1c1c;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.search-results h3{
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}

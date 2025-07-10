@@ -7,13 +7,14 @@ import { useLocation } from 'react-router-dom';
 
 
 function Shop() {
-  
-  const { categoryId } = useParams(); 
-  const items = useSelector((state) => state.allCart.items);
 
+
+  const { categoryId } = useParams();
+  const items = useSelector((state) => state.allCart.items);
   const [selectedCategory, setSelectedCategory] = useState(categoryId || 'all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
   const [priceRange, setPriceRange] = useState(300);
+
 
   const filteredItems = items.filter((item) => {
     const matchCategory = selectedCategory === 'all' || item.category === selectedCategory;
@@ -21,6 +22,13 @@ function Shop() {
     const matchPrice = item.price <= priceRange;
     return matchCategory && matchSubcategory && matchPrice;
   });
+
+  const handleClearFilters = () => {
+    setSelectedCategory('all');
+    setSelectedSubcategory('all');
+    setPriceRange(300);
+  };
+
 
   const countByCategory = (cat) =>
     items.filter((item) => cat === 'all' || item.category === cat).length;
@@ -212,16 +220,26 @@ function Shop() {
                 <div className="filter-section">
                   <h3 className="filter-title">Filter by price</h3>
                   <div className="price-range">
-                    <label>$0 - $300</label>
+                    <label>$0 - ${priceRange}</label>
                     <input
                       type="range"
                       className="form-range custom-range"
                       min="0"
                       max="300"
                       value={priceRange}
-                      onChange={(e) => setPriceRange(e.target.value)}/>
+                      onChange={(e) => setPriceRange(parseInt(e.target.value))} />
 
                   </div>
+                </div>
+
+                <div className="mt-4">
+                  <button
+                    type="button"
+                    className="w-75 shop_btn"
+                    onClick={handleClearFilters}
+                  >
+                    Clear Filters
+                  </button>
                 </div>
               </aside>
 

@@ -1,12 +1,34 @@
-import React from 'react'
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom'
 import Logo from "../../assets/images/logo.png"
 
-function Header() {
-  const wishlistCount = useSelector((state) => state.allCart.wishlist.length);
 
+function Header() {
+  // Search Product
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [input, setInput] = useState('');
+
+  const products = useSelector(state => state.allCart.items);
+  const results = products.filter(p =>
+    p.name.toLowerCase().includes(input.toLowerCase())
+  );
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setInput(value);
+    dispatch(setSearchQuery(value));
+  };
+
+  const handleClick = (id) => {
+    navigate(`/product/${id}`);
+    setInput(''); // clear input after navigation
+  };
+
+  const wishlistCount = useSelector((state) => state.allCart.wishlist.length);
   const { cart } = useSelector((state) => state.allCart);
+
 
 
   return (
@@ -79,7 +101,34 @@ function Header() {
 
             <div className="search-box">
               <i className="search-icon fas fa-search"></i>
-              <input type="text" className="search" placeholder="Search Products ..."/>
+              {/* <input type="text" className="search" placeholder="Search Products ..."/> */}
+              <input
+        type="text"
+        className="search"
+        placeholder="Search for products..."
+        value={input}
+        onChange={handleChange}
+      />
+
+{input && (
+        <div className="search-results position-absolute bg-white shadow-sm p-3">
+          {results.length ? (
+            results.slice(0, 5).map(product => (
+              <div key={product.id} className="d-flex align-items-center mb-2 cursor-pointer"
+                onClick={() => handleClick(product.id)}>
+                <img src={product.src} alt={product.name} width="50" height="50" className="me-2" />
+                <div>
+                  <h4>{product.name}</h4>
+                  <h3 className="text-danger fw-bold">₹{product.price}</h3>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div>No matching products found.</div>
+          )}
+        </div>
+      )}
+
             </div>
 
             <div className="cart-icn d-flex">
