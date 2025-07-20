@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import Logo from "../../assets/images/logo.png"
@@ -9,6 +9,8 @@ function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [input, setInput] = useState('');
+
+  const items = useSelector((state) => state.allCart.items);
 
   const products = useSelector(state => state.allCart.items);
   const results = products.filter(p =>
