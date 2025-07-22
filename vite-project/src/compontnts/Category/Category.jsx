@@ -60,6 +60,8 @@ function Category() {
                 key={index}
                 onMouseEnter={() => setActiveCard(index)}
               >
+              {/* <div className="category-card" key={index}> */}
+                
                 <div className="image">
                   <img src={cat.img} alt={cat.title} />
                   <div className="label">

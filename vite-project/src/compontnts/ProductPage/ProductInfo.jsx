@@ -17,13 +17,13 @@ function ProductInfo() {
   };
 
   const { productId } = useParams();
-  const { id } = useParams(); // Search
+
   const dispatch = useDispatch();
   
+
   const product = useSelector((state) =>
-    state.allCart.items.find((item) => item.id === parseInt(productId) || (p => p.id === parseInt(id)))
-    
-  );
+  state.allCart.items.find((item) => item.id === parseInt(productId))
+);
 
 
   const [selectedSize, setSelectedSize] = useState('');

@@ -9,6 +9,7 @@ const products = [
       quantity: 1,
       category: 'cat-men',
       subcategory: 'shirt',
+      description: 'Navy blue, cotton, printed formal shirt by STOP. Expertly tailored from light cotton with a minimal print, this slim-fit shirt features a sharp cut-away collar, buttoned front, structured chest pocket, and full set-in sleeves, ensuring confidence and ease throughout your workday.',
      },
 
      { id: 2, 
@@ -21,6 +22,7 @@ const products = [
         quantity: 1,
         category: 'cat-women',
         subcategory: 'dress',
+        description: 'Experience elegance and comfort with our womens polyester dress, designed for party occasions. With a sleek, sophisticated solid pattern, this premium dress combines durability and luxury. Perfect for brunch, dinners, or upscale events, it promises style and unmatched comfort. Make a statement with this exquisite piece.',
        },
 
        { id: 3, 
@@ -33,6 +35,7 @@ const products = [
         quantity: 1,
         category: 'cat-men',
         subcategory: 'tshirt',
+        description: 'Elevate your casual style with this crisp white Fratini T-shirt. Crafted from a soft blend of fabrics, it offers both comfort and sophistication. The subtle navy and white trim at the collar adds a touch of understated elegance. A perfect choice for weekend outings or relaxed gatherings.',
        },
         
        { id: 4, 
@@ -45,6 +48,7 @@ const products = [
         quantity: 1,
         category: 'accessory',
         subcategory: 'bag',
+        description: 'Beige textured solid tote bag, with cut work detail 1 main compartment, has a zip closure, 1 external pocket,With a detachable sling strap',
        },
 
        { id: 5, 
@@ -57,6 +61,7 @@ const products = [
         quantity: 1,
         category: 'cat-men',
         subcategory: 'jeans',
+        description: 'Blue dark wash 5-pocket low-rise jeans, clean look, light fade, has a button and zip closure, and waistband with belt loops.',
        },
 
        { id: 6, 
@@ -69,6 +74,7 @@ const products = [
         quantity: 1,
         category: 'accessory',
         subcategory: 'belt',
+        description: 'You can use these belts all year round. It’s comfortable to wear and adds a nice accent to your outfits! They can be matched for dress, baggy T-shirts, sweaters, long coats, long shirt and so on. An exquisite accessory for your daily wear and important occasions.',
        },
 
        { id: 7, 

@@ -2,17 +2,24 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import Logo from "../../assets/images/logo.png"
+import { setItems } from '../../Redux/cartSlice';
 
 
 function Header() {
   // Search Product
+ 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [input, setInput] = useState('');
 
-  const items = useSelector((state) => state.allCart.items);
 
   const products = useSelector(state => state.allCart.items);
+  useEffect(() => {
+    if (products.length === 0) {
+      dispatch(setItems(products));
+    }
+  }, []);
+
   const results = products.filter(p =>
     p.name.toLowerCase().includes(input.toLowerCase())
   );
@@ -20,12 +27,11 @@ function Header() {
   const handleChange = (e) => {
     const value = e.target.value;
     setInput(value);
-    dispatch(setSearchQuery(value));
   };
 
   const handleClick = (id) => {
     navigate(`/product/${id}`);
-    setInput(''); // clear input after navigation
+    setInput(''); 
   };
 
   const wishlistCount = useSelector((state) => state.allCart.wishlist.length);

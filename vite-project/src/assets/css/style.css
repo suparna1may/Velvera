@@ -435,6 +435,15 @@ padding: 47px 0 0 30px;
   opacity: 1;
 }
 
+.category-card:hover {
+  width: 490px;
+}
+
+.category-card:hover .content {
+  width: 240px;
+  opacity: 1;
+}
+
 .category-card.active .image img {
   /* transform: translateX(-20px); */
 }
@@ -1490,6 +1499,7 @@ color: #C7C7C7;
   max-height: 300px;
   overflow-y: auto;
   margin-top: 44px;
+  z-index: 1;
 }
 
 .search-results > div{
