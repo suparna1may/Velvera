@@ -50,11 +50,7 @@ function Arrival() {
                         <div className="wishlist-icon" onClick={() => dispatch(addToWishlist(item))}>
                           <i className="far fa-heart"></i>
                         </div>
-<<<<<<< HEAD
                         <Link to={`/product/${item.id}`} className="shop_btn">Shop Now <i className="fa fa-bag-shopping"></i></Link>
-=======
-                        <Link to={`/product/${item.id}`} className="shop_btn">Add To Cart <i className="fa fa-bag-shopping"></i></Link>
->>>>>>> 71e98abad39008209e35ba7a0f00c106f3021955
                       </div>
                     </div>
                     <div className="product-info">
