@@ -17,7 +17,12 @@ export const cartSlice = createSlice({
     name: "cart",
     initialState,
     reducers: {
-     
+
+      // search products
+
+      setItems: (state, action) => {
+        state.items = action.payload;
+      },   
 
       //wishlist page
 
@@ -26,6 +31,7 @@ export const cartSlice = createSlice({
         if (!existing) {
           state.wishlist.push(action.payload);
           localStorage.setItem('wishlist', JSON.stringify(state.wishlist));
+          alert('Product added to wishlist');
         }
       },
       
@@ -128,5 +134,5 @@ export const cartSlice = createSlice({
     
 });
 
-export const { addItemToCart, addToCart, getCartTotal, removeItem, increaseItemQuantity, decreaseItemQuantity, clearCart, addToWishlist, removeFromWishlist } = cartSlice.actions;
+export const { addItemToCart, addToCart, getCartTotal, removeItem, increaseItemQuantity, decreaseItemQuantity, clearCart, addToWishlist, removeFromWishlist, setItems } = cartSlice.actions;
 export default cartSlice.reducer;

@@ -31,7 +31,7 @@ function ProductCard() {
                     <div className="wishlist-icon" onClick={() => dispatch(addToWishlist(item))}>
                       <i className="far fa-heart"></i>
                     </div>
-                    <Link to={`/product/${item.id}`} className="shop_btn">Add To Cart <i className="fa fa-bag-shopping"></i></Link>
+                    <Link to={`/product/${item.id}`} className="shop_btn">Shop Now <i className="fa fa-bag-shopping"></i></Link>
                   </div>
                 </div>
                 <div className="product-info">

@@ -17,13 +17,13 @@ function ProductInfo() {
   };
 
   const { productId } = useParams();
-  const { id } = useParams(); // Search
+
   const dispatch = useDispatch();
   
+
   const product = useSelector((state) =>
-    state.allCart.items.find((item) => item.id === parseInt(productId) || (p => p.id === parseInt(id)))
-    
-  );
+  state.allCart.items.find((item) => item.id === parseInt(productId))
+);
 
 
   const [selectedSize, setSelectedSize] = useState('');
@@ -157,7 +157,7 @@ function ProductInfo() {
 
                   <h5 className="main_hd">Description</h5>
                   <p className="desc ">
-                    Navy blue, cotton, printed formal shirt by STOP. Expertly tailored from light cotton with a minimal print, this slim-fit shirt features a sharp cut-away collar, buttoned front, structured chest pocket, and full set-in sleeves, ensuring confidence and ease throughout your workday.
+                   {product.description}
                   </p>
                 </div>
               </div>
