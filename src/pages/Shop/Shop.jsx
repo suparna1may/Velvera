@@ -236,8 +236,7 @@ function Shop() {
                   <button
                     type="button"
                     className="w-75 shop_btn"
-                    onClick={handleClearFilters}
-                  >
+                    onClick={handleClearFilters}>
                     Clear Filters
                   </button>
                 </div>
@@ -245,6 +244,7 @@ function Shop() {
 
               <div className="col-md-9">
                 <div className="row">
+
                   {filteredItems.length > 0 ? (
 
                     filteredItems.map((item) => (
