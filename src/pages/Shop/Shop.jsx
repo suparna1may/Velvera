@@ -268,7 +268,7 @@ function Shop() {
 
                   ) : (
                     
-                     <p className="no-products">No products found</p>
+                     <p className="no-products">1No products found</p>
                     
                   )}
              
