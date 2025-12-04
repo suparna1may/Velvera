@@ -243,10 +243,11 @@ function Shop() {
                 </div>
               </aside>
 
-
               <div className="col-md-9">
                 <div className="row">
-                  {filteredItems.map((item) => (
+                  {filteredItems.length > 0 ? (
+
+                    filteredItems.map((item) => (
                     <div className="col-md-4 col-sm-6" key={item.id}>
 
                       <div className="product-card">
@@ -263,7 +264,14 @@ function Shop() {
                       </div>
 
                     </div>
-                  ))}
+                  ))
+
+                  ) : (
+                    
+                     <p className="no-products">No products found</p>
+                    
+                  )}
+             
 
 
                 </div>

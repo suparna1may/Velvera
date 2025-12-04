@@ -14,7 +14,7 @@ function Banner() {
           <div className="ban-wrap ban1">
           <img src={BannerImg1} className="img-fluid"/>
           <div className="ban_content">
-            <h2>Timeless Fashion, Everyday Comfort.123</h2>
+            <h2>Timeless Fashion, Everyday Comfort.</h2>
             <p>From elevated basics to bold statement pieces <br/>
               —discoverlooks that express you.</p>
           </div>
